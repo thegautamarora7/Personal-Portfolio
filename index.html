@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gautam's Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/59f3d27eb2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" alt="logo" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Engineer</p>
+                <h1>Hi, I'm <span>Gautam</span> <br>I'm a </h1>
+                <div class="containers">
+                    <span class="text sec-text">Software Engineer</span>
+                </div>
+                <script>
+                    const text = document.querySelector(".sec-text");
+                    const textLoad = () => {
+                        setTimeout(() => {
+                            text.textContent = "Software Engineer";
+                        }, 0);
+                        setTimeout(() => {
+                            text.textContent = "Web Designer";
+                        }, 4000);
+                        setTimeout(() => {
+                            text.textContent = "App Developer";
+                        }, 8000); //1s = 1000 milliseconds
+                    }
+                    textLoad();
+                    setInterval(textLoad, 12000);
+                </script>  
+                
+                  
+        
+        </div>
+   </div> 
+   </div>
+<!-------------about-------------->
+   <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="user.png" alt="user-image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Passionate Aspiring Software Engineer<br><br>Proficient in C/C++, Java, JavaScript, HTML, CSS, and Full Stack Web Development with Node.js and Express.js. Skilled in RESTful APIs, Postman, Git, and GitHub. Dedicated to crafting seamless, responsive web applications and ensuring robust server-side logic. Experienced in API development and testing. Committed to continuous learning and staying abreast of industry trends. Eager to collaborate on innovative projects, bring technical acumen to the forefront, and contribute to team success. Let's connect and explore opportunities for growth and collaboration in the dynamic world of software engineering.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Design</span><br>Designing Web/App Interafaces</li>
+                            <li><span>Backend Development</span><br>Building strong Backends</li>
+                            <li><span>Frontend Development</span><br>Creating UI/Frontend </li>
+                            <li><span>App Development</span><br>Building Desktop apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022 - Current</span><br>Desigining Frontends and clones of websites</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 - Current</span><br>Mohawk College - Computer System Technician Software Support</li>
+                            <li><span>2016 - 2022</span><br>DCM Group of Schools - High School</li>
+                            <li><span>2009 - 2016</span><br>RSD Raj Rattan Public School - Elementary</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+
+<!---------services----------->
+   <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Experience innovative web design with HTML5, CSS3, JavaScript, and frameworks like React and Vue.js. I create dynamic, responsive websites tailored to your needs. With CMS solutions like WordPress and Shopify, coupled with SEO optimization, your site will captivate audiences and drive results. Let's elevate your online presence together.</p>
+                    <a href="#"><b>Learn more</b></a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Technical Reports</h2>
+                    <p>Experience professional technical report writing tailored to your needs. With expertise in research methodologies, LaTeX, and Microsoft Word, I deliver concise and well-structured reports. From data analysis to documentation, I ensure accuracy and clarity, presenting complex information in an accessible manner. Let's communicate your findings effectively.</p>
+                    <a href="#"><b>Learn more</b></a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>Explore the world of app development with JavaFX, Java, and Scene Builder. I craft intuitive and visually appealing applications tailored to your specifications. Leveraging these technologies and frameworks, including CSS for styling, I ensure seamless user experiences across platforms. Let's bring your app ideas to life.</p>
+                    <a href="#" ><b>Learn more</b></a>
+                </div>
+            </div>
+        </div>
+   </div>
+<!-- ------------my work----------- -->
+   <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Tic-Tac-Toe.png" alt="">
+                <div class="layer">
+                    <h3>Tic Tac Toe Game</h3>
+                    <p>Delve into web development with my responsive Tic-Tac-Toe game! Crafted using HTML, CSS, and JavaScript, it showcases my front-end skills with intuitive gameplay and dynamic responsiveness. Explore the project today! </p>
+                    <a href="https://thegautamarora7.github.io/Tick-Tack-Toe-Game/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                
+            </div>
+            <div class="work">
+                <img src="Currrency Converter.png" alt="" height="401px">
+                <div class="layer">
+                    <h3>Currency Converter</h3>
+                    <p>Embark on a currency conversion adventure! This front-end masterpiece wows with HTML/CSS for design, JavaScript for magic, and responsive UI for seamless global transactions. Experience financial fluidity in style! </p>
+                    <a href="https://thegautamarora7.github.io/Currency-Converter/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                
+            </div>
+            <div class="work">
+                <img src="Potfolio.png" alt="" height="401px">
+                <div class="layer">
+                    <h3>Personal Portfolio</h3>
+                    <p>Dynamic personal portfolio showcasing projects and skills, styled with HTML/CSS, enhanced with JS and jQuery for interactivity, and featuring a contact form with Google Forms integration for seamless communication.</p>
+                    <a href="https://thegautamarora7.github.io/Personal-Portfolio/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                
+            </div>
+            
+           
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+   </div>
+
+   <!-- ------------contact----------- -->
+   <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> gautam@example.com</p>
+                <p><i class="fa-solid fa-square-phone"></i> +1(437) 766 7720</p>
+                <div class="social-icons">
+                    <a href="https://twitter.com/thegautamarora7"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/thegautamarora7/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/gautam-643214227/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/thegautamarora7"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="Gautam_IT_Resume.pdf" class="btn btn2" download>Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id ="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copy-right">
+        <p> Created by Gautam | <i class="fa-regular fa-copyright"></i> All rights reserved</p>
+    </div>
+   </div>
+   <script src="script.js"> </script>
+   <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+   </script>
+ 
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxHFrFaFcniDxrtxc340fLSk0DwxwoSE-AMVJunfzHAmNIg-0ARRd8Y7zc08rpL7jCe/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message has been sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = "";
+            },3000);
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
