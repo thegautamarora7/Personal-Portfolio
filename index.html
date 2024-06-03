@@ -25,25 +25,46 @@
             <div class="header-text">
                 <p>Software Engineer</p>
                 <h1>Hi, I'm <span>Gautam</span> <br>I'm a </h1>
-                <div class="containers">
-                    <span class="text sec-text">Software Engineer</span>
+                <div class="role-container">
+                    <span id="role"></span>
                 </div>
                 <script>
-                    const text = document.querySelector(".sec-text");
-                    const textLoad = () => {
-                        setTimeout(() => {
-                            text.textContent = "Software Engineer";
-                        }, 0);
-                        setTimeout(() => {
-                            text.textContent = "Web Designer";
-                        }, 4000);
-                        setTimeout(() => {
-                            text.textContent = "App Developer";
-                        }, 8000); //1s = 1000 milliseconds
-                    }
-                    textLoad();
-                    setInterval(textLoad, 12000);
-                </script>  
+                    const roles = ['Software Engineer', 'Web Designer', 'App Developer'];
+const roleElement = document.getElementById('role');
+let index = 0;
+
+function typeRole() {
+    roleElement.textContent = '';
+    const currentRole = roles[index];
+    let i = 0;
+    const typingInterval = setInterval(() => {
+        roleElement.textContent += currentRole[i];
+        i++;
+        if (i === currentRole.length) {
+            clearInterval(typingInterval);
+            setTimeout(eraseRole, 1000);
+        }
+    }, 100);
+    index = (index + 1) % roles.length;
+}
+
+function eraseRole() {
+    const currentText = roleElement.textContent;
+    let i = currentText.length - 1;
+    const erasingInterval = setInterval(() => {
+        roleElement.textContent = currentText.substring(0, i);
+        i--;
+        if (i === 0) {
+            clearInterval(erasingInterval);
+            setTimeout(typeRole, 500);
+        }
+    }, 50);
+}
+
+typeRole();
+
+                </script>
+                
                 
                   
         

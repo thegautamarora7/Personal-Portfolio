@@ -454,35 +454,19 @@ nav .fa-solid{
     display: block;
 }
 
-.containers{
-    width: 340px;
-    overflow: hidden;
+.role-container {
+    border-right: 2px solid #333;
+    padding-right: 10px;
 }
-.containers .text{
-    position: relative;
-    color: #ff004f;;
-    font-size: 30px;
-    font-weight: 600;
+
+#role {
+    font-size: 24px;
+    animation: typing 3s steps(40) infinite;
+    white-space: nowrap;
 }
-.containers .text.first-text{
-    color: #FFF;
-}
-.text.sec-text:before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    border-left: 2px solid #ff004f;;
-    animation: animate 4s steps(12) infinite;
-}
-@keyframes animate{
-    40%, 60%{
-        left: calc(100% + 4px);
-    }
-    100%{
-        left: 0%;
+
+@keyframes typing {
+    from {
+        width: 0;
     }
 }
